@@ -1,0 +1,27 @@
+  <div class="slick">
+  <div>
+  <img src="https://www.atpress.ne.jp/releases/193888/LL_img_193888_1.jpg" width="450px" height="300px" class="disp-block blockcenter"></div>
+  <div>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROMR_FhW4AMo7xtF6jTkOq-OWsyRGIDigDuRUVyXeCOFw6f2esmA&s" width="450px" height="300px" class="disp-block blockcenter"></div>
+  <div>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJbSHW-icToyeNOQxCpbLNHvvtuqGR6iL78W-j9BxWKz1_hhZsuA&s" width="450px" height="300px" class="disp-block blockcenter"></div>
+</div>
+  <div class="center">渋谷センター街・渋谷ヒカリエ方面</div>
+<% @posts.each do |post| %>
+  <div class="content">
+    <div class="content__left">
+      <%# <div class="content__left--image"></div> %>
+    </div>
+    <div class="content__right">
+      <div class="content__right__top">
+       <%= link_to post.title, post_path(post.id), class: "content__right__top--title" %>
+        <%# <%= post.title %> 
+      </div>
+      <div class="content__right__bottom">
+        <div class="content__right__bottom--date">
+          <%= post.comment %>
+        </div>
+      </div> 
+    </div>
+  </div>
+<% end %>
